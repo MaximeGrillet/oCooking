@@ -1,0 +1,13 @@
+@mixin container {
+  max-width: 78rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+@mixin content-container {
+  @include container;
+  background: #fff;
+  padding: 30px;
+  margin: 5rem auto;
+  border-radius: 15px;
+}

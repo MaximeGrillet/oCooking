@@ -1,0 +1,22 @@
+@use "mixins";
+
+header {
+  background: #fff;
+  padding: 20px 0;
+  color: #000;
+
+  .header__container {
+    @include mixins.container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h1 {
+    margin: 0;
+
+    a {
+      color: #ff6f61;
+    }
+  }
+}
