@@ -1,28 +1,32 @@
-@use "mixins";
+/* ABSTRACTS */
+@import "./abstracts/variables";
+@import "./abstracts/functions";
+@import "./abstracts/mixins";
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-}
+/* VENDORS */
+/* import de bootstrap, tailwind... */
 
-body {
-  background: #efefef;
-  font-family: 'Roboto', sans-serif;
+/* BASE */
+@import "./base/normallize";
+@import "./base/base";
+@import "./base/typo";
 
-  &.dark {
-    background: #0c0c0c;
-  }
-}
+/* LAYOUT */
+@import "./layout/header";
+@import "./layout/navigation";
+@import "./layout/footer";
 
-a {
-  color: #000;
-  text-decoration: none;
-}
+/* COMPONENTS */
+@import "./components/button";
+@import "./components/form";
+@import "./components/label";
+@import "./components/input";
+@import "./components/recipe-card";
+@import "./components/recipe-list";
 
-.main__container {
-  @include mixins.content-container;
-}
+/* PAGES */
+@import "./pages/home";
+@import "./pages/login";
+
+/* PAGES */
+@import "./themes/themes";

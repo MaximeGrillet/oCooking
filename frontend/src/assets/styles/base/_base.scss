@@ -1,0 +1,24 @@
+@use "../abstracts/mixins";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #efefef;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.main__container {
+  @include mixins.content-container;
+}

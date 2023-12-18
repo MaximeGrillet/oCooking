@@ -1,4 +1,3 @@
-import "../../assets/styles/navigation.scss";
 import { useContext } from "react";
 import { AuthContext } from "../../hooks/auth-context.tsx";
 import { Link } from "react-router-dom";

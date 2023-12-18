@@ -4,10 +4,10 @@ services:
   frontend:
     build: ./frontend
     ports:
-      - "5174:5173"
+      - "5173:5173"
     volumes:
       - ./frontend:/frontend
-    command: npm run dev
+    command: npm run setup
 
   backend:
     build: ./backend

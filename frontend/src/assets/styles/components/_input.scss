@@ -1,0 +1,11 @@
+input {
+    background: #fff;
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+    padding: 8px 10px;
+    outline: none;
+
+    &.error {
+        border-radius: $danger-color;
+    }
+}

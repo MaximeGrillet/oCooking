@@ -1,5 +1,4 @@
 import { RecipeCardProps } from "../@types/recipe.ts";
-import "../assets/styles/recipeCard.scss";
 import { useNavigate } from "react-router-dom";
 
 const RecipeCard = ({ recipe }: RecipeCardProps) => {

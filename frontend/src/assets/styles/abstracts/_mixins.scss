@@ -1,0 +1,28 @@
+@mixin container {
+  max-width: 78rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+@mixin content-container {
+  @include container;
+  background: #fff;
+  padding: 30px;
+  margin: 5rem auto;
+  border-radius: 15px;
+}
+
+@mixin button($primary-color, $secondary-color) {
+  background: $primary-color;
+  color: $secondary-color;
+  border: 2px solid $primary-color;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: background 300ms;
+
+  &:hover {
+    background: $secondary-color;
+    color: $primary-color;
+  }
+}

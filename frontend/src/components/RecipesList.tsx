@@ -1,5 +1,4 @@
 import RecipeCard from "./RecipeCard.tsx";
-import "../assets/styles/recipesList.scss";
 import { RecipeListProps } from "../@types/recipe.ts";
 
 const RecipesList = ({ recipes }: RecipeListProps) => {

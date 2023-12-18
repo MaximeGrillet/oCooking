@@ -1,4 +1,3 @@
-import "../assets/styles/login.scss";
 import { SyntheticEvent, useContext, useState } from "react";
 import { AuthContext } from "../hooks/auth-context.tsx";
 import { useNavigate } from "react-router-dom";

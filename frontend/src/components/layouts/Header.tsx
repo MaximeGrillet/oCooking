@@ -1,5 +1,4 @@
 import Navigation from "./Navigation.tsx";
-import "../../assets/styles/header.scss";
 import { Link } from "react-router-dom";
 
 const Header = () => {
