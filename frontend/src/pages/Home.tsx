@@ -1,20 +1,26 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import RecipesList from "../components/RecipesList.tsx";
-import { fetchRecipes } from "../api/recipe.ts";
-import { Recipe } from "../@types/recipe.ts";
+import { useAppDispatch, useAppSelector } from "../hooks/redux.ts";
+import { countRecipes, getAllRecipes, loadRecipesData } from "../store/features/recipe/recipeSlice.ts";
 
 const Home = () => {
-  const [recipes, setRecipes] = useState<Recipe[]>([]);
+  // Use the recipe store
+  // const recipesStore = useAppSelector(state => state.recipe.recipes);
+  const recipesStore = useAppSelector(getAllRecipes);
+  const recipesCount = useAppSelector(countRecipes);
+  console.log(recipesStore)
+
+  // Dispatch a function in a store
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
-    (async () => {
-      setRecipes(await fetchRecipes());
-    })();
+    dispatch(loadRecipesData())
   }, []);
 
   return (
     <>
-      <RecipesList recipes={recipes} />
+      <h1>Recettes: {recipesCount}</h1>
+      <RecipesList recipes={recipesStore} />
     </>
   );
 };
