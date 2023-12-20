@@ -1,4 +1,5 @@
 import { User } from "../@types/user.ts";
+import wrapPromise from "./wrapPromise.ts";
 
 export const fetchRecipes = async () => {
   const response = await fetch("/api/recipes?_expand=user");
@@ -17,3 +18,12 @@ export const fetchRecipesForConnectedUser = async (user: User | null) => {
 
   return await response.json();
 };
+
+export const fetchRecipesWithDelay = () => {
+  const delayedPromise = new Promise((resolve) => setTimeout(resolve, 5000))
+    .then(async () => {
+      return await fetchRecipes();
+    })
+
+  return wrapPromise(delayedPromise);
+}
