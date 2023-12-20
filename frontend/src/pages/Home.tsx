@@ -21,7 +21,9 @@ const Home = () => {
     <>
       <h1>Recettes: {recipesCount}</h1>
       <Suspense fallback={<Loading />}>
-        <RecipesList recipes={recipesStore} />
+        <RecipesList 
+        // recipes={recipesStore} 
+        />
       </Suspense>
     </>
   );
